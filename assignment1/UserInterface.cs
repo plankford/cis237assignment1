@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace assignment1
 {
+    //Use this class for UserInterface interaction
+
     class UserInterface
     {
 

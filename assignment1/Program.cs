@@ -22,23 +22,25 @@ namespace assignment1
                 {
                 case 1:
                     //Load wine list
-                    Console.WriteLine("Choice 1");
+                    Console.WriteLine("Loading Wine List.");
+                    //instatntiate the CSVProcessor and send over the file location of the wine item list
+                    CSVProcessor wineList = new CSVProcessor("WineList.csv");
                     break;
                 case 2:
                     //Print wine list
-                    Console.WriteLine("Choice 2");
+                    Console.WriteLine("Printing Wine List.");
                     break;
                 case 3:
                     //Search wine list
-                    Console.WriteLine("Choice 3");
+                    Console.WriteLine("What Item Would You Like To Search For?");
                     break;
                 case 4:
                     //Add item to wine list
-                    Console.WriteLine("Choice 4");
+                    Console.WriteLine("Enter The Wine Item You Would Like To Add.");
                     break;
                 case 5:
                     //Close the application
-                    Console.WriteLine("Choice 5");
+                    Console.WriteLine("Closing Application");
                     break;
                 default:
                     break;
