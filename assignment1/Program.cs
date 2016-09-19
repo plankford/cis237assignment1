@@ -10,6 +10,13 @@ namespace assignment1
     {
         static void Main(string[] args)
         {
+            //instantiate the user interface class
+            UserInterface ui = new UserInterface();
+
+            //Print the menu to the screen for the user to make a selection
+            int userChoice = ui.GetUserInput();
+
+
         }
     }
 }
