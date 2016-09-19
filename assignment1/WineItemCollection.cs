@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace assignment1
 {
-    class WineItemCollection
+    class wineList
     {
 
         //Use this class to create the array 
 
-        WineItemCollection[] wineList = new WineItemCollection[6000];
+        wineList[] wineCollection = new wineList[6000];
 
         /*
          * Variables
@@ -61,7 +61,7 @@ namespace assignment1
             
         //}
 
-        public WineItemCollection(int _id, string _description, int _pack)
+        public wineList(int _id, string _description, int _pack)
         {
             this._id = _id;
             this._description = _description;

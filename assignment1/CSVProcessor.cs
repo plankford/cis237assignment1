@@ -13,28 +13,32 @@ namespace assignment1
     class CSVProcessor
     {
         // Create the StreamReader and set to null
-        StreamReader streamReader = null;
+        //StreamReader streamReader = new StreamReader("WineList.CSV");
+        //StreamReader streamReader = null;
 
         //Create the array for the wine list
-        WineItemCollection[] wineList = new WineItemCollection[6000];
+        wineList[] wineCollection = new wineList[6000];
 
         /*
          * Variables
          * */
-        //int _id;
-        //int _description;
-        //int _pack;
         string _line;
-        int _counter;
+        int _counter = 0;
+        private StreamReader streamReader;
 
 
         /*
          * Properties
          * */
 
+
+
         /*
          * Methods
          * */
+
+
+
         /*
          * Import the wine items from the CSV file that is read in from the program class
          * Continue to read the file until the line is null
@@ -42,22 +46,26 @@ namespace assignment1
          * Send the line that is read over to the processLine method to actually process the line
          * Once the file is read we will close the file
          * */
-        private void ImportWineItemList()
+        public bool ImportWineItemList()
         {
+            StreamReader streamReader = null;
             try
             {
                 _counter = 0;
 
-                while((_line = streamReader.ReadLine()) != null);
+                while ((_line = streamReader.ReadLine()) != null)
                 {
-                    processLine(_line, wineList, _counter++);
+                    processLine(_line, wineCollection, _counter++);
                 }
+                return true;
             }
             catch (Exception e)
             {
                 Console.Write(e.ToString());
                 Console.WriteLine();
                 Console.WriteLine(e.StackTrace);
+
+                return false;
             }
             finally
             {
@@ -74,7 +82,7 @@ namespace assignment1
          * Once the line is processed we will send the line over the the WineCollection class
          * where the array will be created
          * */
-        public void processLine(string line, WineItemCollection[] wineList, int index)
+        public void processLine(string line, wineList[] wineList, int index)
         {
             string[] parts = line.Split(',');
 
@@ -83,7 +91,7 @@ namespace assignment1
             int pack = int.Parse(parts[2]);
 
             //Create the array in the WineItemCollection class
-            wineList[index] = new WineItemCollection(id, description, pack);
+            wineList[index] = new wineList(id, description, pack);
         }
         
 
