@@ -13,6 +13,8 @@ namespace assignment1
             //instantiate the user interface class
             UserInterface ui = new UserInterface();
 
+            WineItemCollection[] wineList = new WineItemCollection[6000];
+
             //Print the menu to the screen for the user to make a selection
             int userChoice = ui.GetUserInput();
 
@@ -24,7 +26,7 @@ namespace assignment1
                     //Load wine list
                     Console.WriteLine("Loading Wine List.");
                     //instatntiate the CSVProcessor and send over the file location of the wine item list
-                    CSVProcessor wineList = new CSVProcessor("WineList.csv");
+                    CSVProcessor wineItems = new CSVProcessor("WineList.csv");
                     break;
                 case 2:
                     //Print wine list
@@ -47,6 +49,19 @@ namespace assignment1
                 }
                 userChoice = ui.GetUserInput();
             }
+
         }
+
+        //private void PrintArray()
+        //{
+        //    foreach (WineItemCollection wineList in wineList)
+        //    {
+        //        if (wineList != null)
+        //        {
+        //            //Create the string for printing the output
+        //            //Console.WriteLine(WineItemCollection.)
+        //        }
+        //    }
+        //}
     }
 }

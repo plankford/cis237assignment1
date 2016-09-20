@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace assignment1
 {
-    class wineList
+    class WineItemCollection
     {
 
         //Use this class to create the array 
 
-        wineList[] wineCollection = new wineList[6000];
+        WineItemCollection[] wineCollection = new WineItemCollection[6000];
 
         /*
          * Variables
@@ -49,23 +49,17 @@ namespace assignment1
         /*
          * Constructor
          * */
-        //public WineItemCollection(string Line, Array WineCollection, int Counter)
-        //{
-        //    string[] parts = Line.Split(',');
 
-        //    _id = int.Parse(parts[0]);
-        //    _description = parts[1];
-        //    _pack = int.Parse(parts[2]);
-
-        //    WineList[Counter] = wineList(_id, _description, _pack);
-            
-        //}
-
-        public wineList(string _id, string _description, string _pack)
+        public WineItemCollection(string _id, string _description, string _pack)
         {
             this._id = _id;
             this._description = _description;
             this._pack = _pack;
+        }
+
+        public WineItemCollection()
+        {
+
         }
     }
 }

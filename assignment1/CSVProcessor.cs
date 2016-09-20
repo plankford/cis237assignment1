@@ -17,7 +17,7 @@ namespace assignment1
         //StreamReader streamReader = null;
 
         //Create the array for the wine list
-        wineList[] wineCollection = new wineList[6000];
+        WineItemCollection[] wineCollection = new WineItemCollection[6000];
 
         /*
          * Variables
@@ -91,7 +91,7 @@ namespace assignment1
          * Once the line is processed we will send the line over the the WineCollection class
          * where the array will be created
          * */
-        public void processLine(string line, wineList[] wineList, int index)
+        public void processLine(string line, WineItemCollection[] wineList, int index)
         {
             string[] parts = line.Split(',');
 
@@ -100,7 +100,7 @@ namespace assignment1
             string pack = parts[2];
 
             //Create the array in the WineItemCollection class
-            wineList[index] = new wineList(id, description, pack);
+            wineList[index] = new WineItemCollection(id, description, pack);
         }
         
 
