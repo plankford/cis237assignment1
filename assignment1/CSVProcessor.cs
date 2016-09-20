@@ -48,7 +48,7 @@ namespace assignment1
          * */
         public bool ImportWineItemList()
         {
-            StreamReader streamReader = null;
+           // StreamReader streamReader = null;
             try
             {
                 _counter = 0;
@@ -56,6 +56,15 @@ namespace assignment1
                 while ((_line = streamReader.ReadLine()) != null)
                 {
                     processLine(_line, wineCollection, _counter++);
+
+                    //string[] parts = _line.Split(',');
+
+                    //int id = int.Parse(parts[0]);
+                    //string description = parts[1];
+                    //int pack = int.Parse(parts[2]);
+
+                    ////Create the array in the WineItemCollection class
+                    //wineList[_counter] = new wineList(id, description, pack);
                 }
                 return true;
             }
@@ -86,9 +95,9 @@ namespace assignment1
         {
             string[] parts = line.Split(',');
 
-            int id = int.Parse(parts[0]);
+            string id = parts[0];
             string description = parts[1];
-            int pack = int.Parse(parts[2]);
+            string pack = parts[2];
 
             //Create the array in the WineItemCollection class
             wineList[index] = new wineList(id, description, pack);

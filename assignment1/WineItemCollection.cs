@@ -16,15 +16,15 @@ namespace assignment1
         /*
          * Variables
          * */
-        private int _id;
+        private string _id;
         private string _description;
-        private int _pack;
+        private string _pack;
         string[] WineList;
 
         /*
          * Properties
          * */
-        public int ID
+        public string ID
         {
             get { return _id; }
             set { _id = value; }
@@ -36,7 +36,7 @@ namespace assignment1
             set { _description= value; }
         }
 
-        public int Pack
+        public string Pack
         {
             get { return _pack; }
             set { _pack = value; }
@@ -61,7 +61,7 @@ namespace assignment1
             
         //}
 
-        public wineList(int _id, string _description, int _pack)
+        public wineList(string _id, string _description, string _pack)
         {
             this._id = _id;
             this._description = _description;
