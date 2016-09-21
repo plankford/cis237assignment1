@@ -12,8 +12,8 @@ namespace assignment1
         {
             //instantiate the user interface class
             UserInterface ui = new UserInterface();
-
-            WineItemCollection[] wineList = new WineItemCollection[6000];
+            //WineItemCollection[] wineList = new WineItemCollection[6000];
+            WineItemCollection wineCollection = new WineItemCollection();
 
             //Print the menu to the screen for the user to make a selection
             int userChoice = ui.GetUserInput();
@@ -31,6 +31,7 @@ namespace assignment1
                 case 2:
                     //Print wine list
                     Console.WriteLine("Printing Wine List.");
+                    wineCollection.PrintArray();
                     break;
                 case 3:
                     //Search wine list
@@ -49,19 +50,6 @@ namespace assignment1
                 }
                 userChoice = ui.GetUserInput();
             }
-
         }
-
-        //private void PrintArray()
-        //{
-        //    foreach (WineItemCollection wineList in wineList)
-        //    {
-        //        if (wineList != null)
-        //        {
-        //            //Create the string for printing the output
-        //            //Console.WriteLine(WineItemCollection.)
-        //        }
-        //    }
-        //}
     }
 }

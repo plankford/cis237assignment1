@@ -8,58 +8,75 @@ namespace assignment1
 {
     class WineItemCollection
     {
-
-        //Use this class to create the array 
-
-        WineItemCollection[] wineCollection = new WineItemCollection[6000];
-
-        /*
+        
+        /********************************
          * Variables
-         * */
-        private string _id;
-        private string _description;
-        private string _pack;
-        string[] WineList;
+         * *******************************/
+        //private string description;
+        //private string id;
+        //private string pack;
+        string[] wineArray = new string[6000];
+        string array;
+        //Use this class to create the array 
+        //WineItemCollection[] wineList = new WineItemCollection[6000];
+        //WineItem[] wineList = new WineItem[6000];
+        UserInterface ui = new UserInterface();
 
-        /*
-         * Properties
-         * */
-        public string ID
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-
-        public string Description
-        {
-            get { return _description; }
-            set { _description= value; }
-        }
-
-        public string Pack
-        {
-            get { return _pack; }
-            set { _pack = value; }
-        }
-
-        /*
-         * Methods
-         * */
-
-        /*
+        /*****************************
          * Constructor
-         * */
+         * ***************************/
+        //public WineItemCollection(string id, string description, string pack)
+        //{
+        //    this.id = id;
+        //    this.description = description;
+        //    this.pack = pack;
+        //}
 
-        public WineItemCollection(string _id, string _description, string _pack)
+        //public WineItemCollection()
+        //{
+
+        //}
+
+
+        //public string WineItems[6000];
+
+        /*****************************
+         * Properties
+         * ***************************/
+
+        /*******************************
+         * Methods
+         * ****************************/
+        public void AddWineItem(string _line, int _index)
         {
-            this._id = _id;
-            this._description = _description;
-            this._pack = _pack;
+            string[] parts = _line.Split(',');
+
+            string id = parts[0];
+            string description = parts[1];
+            string pack = parts[2];
+
+            string wineLine = id + "    " + description + "      " + pack;
+
+            //wineList[index] = wineLine;
+
+            //wineArray[_index] = new WineItem(id, description, pack);
+            wineArray[_index] = wineLine;
         }
 
-        public WineItemCollection()
+        public void CreateArrayString()
         {
+            //string array = " ";
 
+            foreach (var item in wineArray)
+            {
+                Console.WriteLine(item.ToString());
+                array += item + Environment.NewLine;
+            }
+        }
+
+        public void PrintArray()
+        {
+            ui.printOutput(array);
         }
     }
 }

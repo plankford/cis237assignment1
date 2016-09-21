@@ -17,7 +17,7 @@ namespace assignment1
         //StreamReader streamReader = null;
 
         //Create the array for the wine list
-        WineItemCollection[] wineCollection = new WineItemCollection[6000];
+        WineItemCollection wineCollection = new WineItemCollection();
 
         /*
          * Variables
@@ -26,18 +26,13 @@ namespace assignment1
         int _counter = 0;
         private StreamReader streamReader;
 
-
         /*
          * Properties
          * */
 
-
-
         /*
          * Methods
          * */
-
-
 
         /*
          * Import the wine items from the CSV file that is read in from the program class
@@ -55,17 +50,10 @@ namespace assignment1
 
                 while ((_line = streamReader.ReadLine()) != null)
                 {
-                    processLine(_line, wineCollection, _counter++);
-
-                    //string[] parts = _line.Split(',');
-
-                    //int id = int.Parse(parts[0]);
-                    //string description = parts[1];
-                    //int pack = int.Parse(parts[2]);
-
-                    ////Create the array in the WineItemCollection class
-                    //wineList[_counter] = new wineList(id, description, pack);
+                    //processLine(_line, _counter++);
+                    wineCollection.AddWineItem(_line, _counter++);
                 }
+                wineCollection.CreateArrayString();
                 return true;
             }
             catch (Exception e)
@@ -85,24 +73,6 @@ namespace assignment1
 
             }
         }
-
-        /*
-         * Process the line that is read in.
-         * Once the line is processed we will send the line over the the WineCollection class
-         * where the array will be created
-         * */
-        public void processLine(string line, WineItemCollection[] wineList, int index)
-        {
-            string[] parts = line.Split(',');
-
-            string id = parts[0];
-            string description = parts[1];
-            string pack = parts[2];
-
-            //Create the array in the WineItemCollection class
-            wineList[index] = new WineItemCollection(id, description, pack);
-        }
-        
 
         /*
          * Constructor

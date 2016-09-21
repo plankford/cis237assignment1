@@ -13,14 +13,14 @@ namespace assignment1
         /*
          * Variables
          * */
-        private int _id;
+        private string _id;
         private string _wineDescription;
-        private int _packNumber;
+        private string _packNumber;
 
         /*
          * Properties
          * */
-        public int WineID
+        public string WineID
         {
             get { return _id; }
             set { _id = value; }
@@ -32,7 +32,7 @@ namespace assignment1
             set { _wineDescription = value; }
         }
 
-        public int PackNumber
+        public string PackNumber
         {
             get { return _packNumber; }
             set { _packNumber = value; }
@@ -48,7 +48,7 @@ namespace assignment1
         /*
          * Contructor
          * */
-        public WineItem(int id, string wineDescription, int packNumber)
+        public WineItem(string id, string wineDescription, string packNumber)
         {
             this._id = id;
             this._wineDescription = wineDescription;
@@ -59,6 +59,5 @@ namespace assignment1
         {
             //Empty Constructor
         }
-
     }
 }
