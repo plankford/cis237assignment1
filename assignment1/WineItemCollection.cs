@@ -13,7 +13,7 @@ namespace assignment1
          * Variables
          * *******************************/
         private string[] wineArray = new string[6000];
-        public string array;
+        private string array;
         
         UserInterface ui = new UserInterface();
 
@@ -44,16 +44,11 @@ namespace assignment1
 
             string wineLine = id + "    " + description + "      " + pack;
 
-            //wineList[index] = wineLine;
-
-            //wineArray[_index] = new WineItem(id, description, pack);
             wineArray[_index] = wineLine;
         }
 
         public void CreateArrayString()
         {
-            //string array = " ";
-
             foreach (var item in wineArray)
             {
                 //Console.WriteLine(item.ToString());                           //Uncomment this back out when finished
