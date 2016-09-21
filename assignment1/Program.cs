@@ -12,7 +12,7 @@ namespace assignment1
         {
             //instantiate the user interface class
             UserInterface ui = new UserInterface();
-            //WineItemCollection[] wineList = new WineItemCollection[6000];
+            
             WineItemCollection wineCollection = new WineItemCollection();
 
             //Print the menu to the screen for the user to make a selection
@@ -31,7 +31,7 @@ namespace assignment1
                 case 2:
                     //Print wine list
                     Console.WriteLine("Printing Wine List.");
-                    wineCollection.PrintArray();
+                    Console.WriteLine(wineCollection.PrintWineArray.ToString());
                     break;
                 case 3:
                     //Search wine list

@@ -12,13 +12,6 @@ namespace assignment1
 
     class CSVProcessor
     {
-        // Create the StreamReader and set to null
-        //StreamReader streamReader = new StreamReader("WineList.CSV");
-        //StreamReader streamReader = null;
-
-        //Create the array for the wine list
-        WineItemCollection wineCollection = new WineItemCollection();
-
         /*
          * Variables
          * */
@@ -43,17 +36,17 @@ namespace assignment1
          * */
         public bool ImportWineItemList()
         {
-           // StreamReader streamReader = null;
+            WineItemCollection wineCollection = new WineItemCollection();
             try
             {
                 _counter = 0;
 
                 while ((_line = streamReader.ReadLine()) != null)
                 {
-                    //processLine(_line, _counter++);
                     wineCollection.AddWineItem(_line, _counter++);
+
                 }
-                wineCollection.CreateArrayString();
+                wineCollection.CreateArrayString();                                         // This is added
                 return true;
             }
             catch (Exception e)
@@ -79,9 +72,9 @@ namespace assignment1
          * Set the loaction of the CSV file
          * Go to import the wine list
          * */
-        public CSVProcessor(string WineItemList)
+        public CSVProcessor(string CSVFile)
         {
-            streamReader = new StreamReader(WineItemList);
+            streamReader = new StreamReader(CSVFile);
             ImportWineItemList();
         }
         

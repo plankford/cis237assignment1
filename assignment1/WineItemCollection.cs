@@ -12,37 +12,24 @@ namespace assignment1
         /********************************
          * Variables
          * *******************************/
-        //private string description;
-        //private string id;
-        //private string pack;
-        string[] wineArray = new string[6000];
-        string array;
-        //Use this class to create the array 
-        //WineItemCollection[] wineList = new WineItemCollection[6000];
-        //WineItem[] wineList = new WineItem[6000];
+        private string[] wineArray = new string[6000];
+        public string array;
+        
         UserInterface ui = new UserInterface();
 
         /*****************************
          * Constructor
          * ***************************/
-        //public WineItemCollection(string id, string description, string pack)
-        //{
-        //    this.id = id;
-        //    this.description = description;
-        //    this.pack = pack;
-        //}
-
-        //public WineItemCollection()
-        //{
-
-        //}
-
-
-        //public string WineItems[6000];
 
         /*****************************
          * Properties
          * ***************************/
+
+        public string PrintWineArray
+        {
+            get { return array; }
+            set { array = value; }
+        }
 
         /*******************************
          * Methods
@@ -69,7 +56,7 @@ namespace assignment1
 
             foreach (var item in wineArray)
             {
-                Console.WriteLine(item.ToString());
+                //Console.WriteLine(item.ToString());                           //Uncomment this back out when finished
                 array += item + Environment.NewLine;
             }
         }
