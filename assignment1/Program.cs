@@ -15,6 +15,8 @@ namespace assignment1
             
             WineItemCollection wineCollection = new WineItemCollection();
 
+            WineItem wineItem = new WineItem();
+
             //Print the menu to the screen for the user to make a selection
             int userChoice = ui.GetUserInput();
 
@@ -44,6 +46,8 @@ namespace assignment1
                 case 4:
                     //Add item to wine list
                     Console.WriteLine("Enter The Wine Item You Would Like To Add.");
+                    string addWineItem = ui.GetAddItem();
+                    wineCollection.NewWineItem(addWineItem);
                     break;
                 case 5:
                     //Close the application

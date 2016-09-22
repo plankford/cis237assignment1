@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace assignment1
 {
-    //This is going to be used for printing the wine items to the console
 
     class WineItem
     {

@@ -10,6 +10,7 @@ namespace assignment1
 
     class UserInterface
     {
+        private WineItem wineItem;
 
         public int GetUserInput()
         {
@@ -17,7 +18,7 @@ namespace assignment1
 
             string input = Console.ReadLine();
 
-            while(input != "1" && input != "2" && input != "3" && input != "4")
+            while(input != "1" && input != "2" && input != "3" && input != "4" && input != "5")
             {
                 Console.WriteLine("That is not a valid selection, Please try again");
                 Console.WriteLine();
@@ -48,6 +49,22 @@ namespace assignment1
         {
             string searchString = Console.ReadLine();
             return searchString;
+        }
+
+        public string GetAddItem()
+        {
+            Console.Write("Enter the Wine ID:  ");
+            string id = Console.ReadLine();
+            Console.Write("Enter the Description:   ");
+            string description = Console.ReadLine();
+            Console.Write("Enter the Pack:   ");
+            string pack = Console.ReadLine();
+
+            WineItem addWineItem = new WineItem(id, description, pack);
+
+            string newWineItem = addWineItem.WineID + "   " + addWineItem.WineDescription + "   " + addWineItem.PackNumber;
+
+            return newWineItem;
         }
     }
 }

@@ -98,5 +98,10 @@ namespace assignment1
                 ui.printOutput("Item Not Found");
             }
         }
+
+        public void NewWineItem(string newWineItem)
+        {
+            array += newWineItem;
+        }
     }
 }
