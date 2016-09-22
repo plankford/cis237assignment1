@@ -95,9 +95,9 @@ namespace assignment1
                 {
                 ui.printOutput("Item Found");
                 found = true;
-                i = wineArray.Length;
+                i = wineArray.Length - 1;
                 }                                                  
-            }
+            }        
             //If the string is not found output that is was not found
             if (found == false)
             {
