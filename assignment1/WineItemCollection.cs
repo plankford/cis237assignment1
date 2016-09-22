@@ -18,10 +18,6 @@ namespace assignment1
         UserInterface ui = new UserInterface();
 
         /*****************************
-         * Constructor
-         * ***************************/
-
-        /*****************************
          * Properties
          * ***************************/
 
@@ -34,6 +30,12 @@ namespace assignment1
         /*******************************
          * Methods
          * ****************************/
+
+        /*
+         *Take the string (line) and the index that is send from the CSV processor and create the fulle
+         * string that will become the wineLine. This line will then be added to the wineArray at the current
+         * index. 
+         * */
         public void AddWineItem(string _line, int _index)
         {
             string[] parts = _line.Split(',');
@@ -47,19 +49,54 @@ namespace assignment1
             wineArray[_index] = wineLine;
         }
 
+        /*
+         * Take the items in the wineArray and add them to a string "array" that will be used for 
+         * output to the console for the entire array
+         * */
         public void CreateArrayString()
         {
             foreach (var item in wineArray)
             {
-                //Console.WriteLine(item.ToString());                           //Uncomment this back out when finished
                 array += item + Environment.NewLine;
-                //ui.printOutput(array);
             }
         }
 
+        /*
+         * Send the string array over to the ui for output
+         * */
         public void PrintArray()
         {
             ui.printOutput(array);
+        }
+
+        /*
+         * Bring the search string in that was sent from main and search the entire array for that item
+         * */
+        public void SearchWineList(string searchString)
+        {
+            int i;
+            bool found = false;
+
+            /*
+             * Use the current length of the array and search for the string. Use the .Contains of the array just
+             * to search for the wine id and not have to match the entire string
+             * */
+            for (i=0; i < wineArray.Length; i++)
+            {
+                while (found == false)
+                {
+                    if (wineArray[i].Contains(searchString))
+                    {
+                    ui.printOutput("Item Found");
+                    found = true; 
+                    }
+                }                    
+            }
+
+            if (found == false)
+            {
+                ui.printOutput("Item Not Found");
+            }
         }
     }
 }

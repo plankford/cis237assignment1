@@ -43,5 +43,11 @@ namespace assignment1
         {
             Console.WriteLine(output);
         }
+
+        public string GetSearchString()
+        {
+            string searchString = Console.ReadLine();
+            return searchString;
+        }
     }
 }

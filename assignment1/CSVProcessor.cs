@@ -20,10 +20,6 @@ namespace assignment1
         private WineItemCollection wineCollection;
 
         /*
-         * Properties
-         * */
-
-        /*
          * Methods
          * */
 
@@ -36,7 +32,6 @@ namespace assignment1
          * */
         public bool ImportWineItemList()
         {
-            //WineItemCollection wineList = new WineItemCollection();
             try
             {
                 _counter = 0;
@@ -77,7 +72,7 @@ namespace assignment1
             ImportWineItemList();
         }
 
-        public CSVProcessor(string CSVFile, WineItemCollection wineCollection)// : this(CSVFile)
+        public CSVProcessor(string CSVFile, WineItemCollection wineCollection)  // : this(CSVFile)
         {
             this.wineCollection = wineCollection;
 

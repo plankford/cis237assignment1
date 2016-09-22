@@ -18,6 +18,8 @@ namespace assignment1
             //Print the menu to the screen for the user to make a selection
             int userChoice = ui.GetUserInput();
 
+            //bool foundItem = false;
+
             while(userChoice != 5)
             {
                 switch (userChoice)
@@ -36,6 +38,8 @@ namespace assignment1
                 case 3:
                     //Search wine list
                     Console.WriteLine("What Item Would You Like To Search For?");
+                    string searchString = ui.GetSearchString();
+                    wineCollection.SearchWineList(searchString);
                     break;
                 case 4:
                     //Add item to wine list
