@@ -12,7 +12,7 @@ namespace assignment1
         /********************************
          * Variables
          * *******************************/
-        private string[] wineArray = new string[6000];
+        private string[] wineArray = new string[4000];
         private string array;
         
         UserInterface ui = new UserInterface();
@@ -53,6 +53,7 @@ namespace assignment1
             {
                 //Console.WriteLine(item.ToString());                           //Uncomment this back out when finished
                 array += item + Environment.NewLine;
+                //ui.printOutput(array);
             }
         }
 

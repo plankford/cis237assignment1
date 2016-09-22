@@ -26,12 +26,12 @@ namespace assignment1
                     //Load wine list
                     Console.WriteLine("Loading Wine List.");
                     //instatntiate the CSVProcessor and send over the file location of the wine item list
-                    CSVProcessor wineItems = new CSVProcessor("WineList.csv");
+                    CSVProcessor CSVFile = new CSVProcessor("WineList.csv", wineCollection);
                     break;
                 case 2:
                     //Print wine list
                     Console.WriteLine("Printing Wine List.");
-                    Console.WriteLine(wineCollection.PrintWineArray.ToString());
+                    wineCollection.PrintArray();
                     break;
                 case 3:
                     //Search wine list

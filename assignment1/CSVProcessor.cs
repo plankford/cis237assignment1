@@ -17,6 +17,7 @@ namespace assignment1
         string _line;
         int _counter = 0;
         private StreamReader streamReader;
+        private WineItemCollection wineCollection;
 
         /*
          * Properties
@@ -35,7 +36,7 @@ namespace assignment1
          * */
         public bool ImportWineItemList()
         {
-            WineItemCollection wineCollection = new WineItemCollection();
+            //WineItemCollection wineList = new WineItemCollection();
             try
             {
                 _counter = 0;
@@ -43,7 +44,6 @@ namespace assignment1
                 while ((_line = streamReader.ReadLine()) != null)
                 {
                     wineCollection.AddWineItem(_line, _counter++);
-
                 }
                 wineCollection.CreateArrayString();                                         // This is added
                 return true;
@@ -76,6 +76,13 @@ namespace assignment1
             streamReader = new StreamReader(CSVFile);
             ImportWineItemList();
         }
-        
+
+        public CSVProcessor(string CSVFile, WineItemCollection wineCollection)// : this(CSVFile)
+        {
+            this.wineCollection = wineCollection;
+
+            streamReader = new StreamReader(CSVFile);
+            ImportWineItemList();
+        }
     }
 }
