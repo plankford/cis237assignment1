@@ -1,7 +1,7 @@
 # Assignment 1 - Review of C# Basic Concepts and Introduction to Git
 ## Due 9-20-2016
 
-## Author
+## Author: Patrick Lankford
 
 ## Description
 
@@ -80,5 +80,7 @@ Suggestion/Hints:
 | **Total**           | **100**|
 
 ## Outside Resources Used
+* Stack Overflow, MSDN Library, David Barnes, In Class Assignment1 Project, Previous class projects
 
 ## Known Problems, Issues, And/Or Errors in the Program
+*Issue when searching for an item that does not exist in the array. Throws an exception is WineItemClass during the search. Noted in a comment in the code

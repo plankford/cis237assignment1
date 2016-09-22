@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Patrick Lankford
+ * CIS 237 T-R
+ * September 22, 2016
+ * */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -83,22 +90,21 @@ namespace assignment1
              * */
             for (i=0; i < wineArray.Length; i++)
             {
-                while (found == false)
+                //****This is where the program will throw exception if the string does not exist            
+                if (wineArray[i].Contains(searchString))
                 {
-                    if (wineArray[i].Contains(searchString))
-                    {
-                    ui.printOutput("Item Found");
-                    found = true; 
-                    }
-                }                    
+                ui.printOutput("Item Found");
+                found = true;
+                i = wineArray.Length;
+                }                                                  
             }
-
+            //If the string is not found output that is was not found
             if (found == false)
             {
                 ui.printOutput("Item Not Found");
             }
         }
-
+        //Add the new item to the array for wine items
         public void NewWineItem(string newWineItem)
         {
             array += newWineItem;

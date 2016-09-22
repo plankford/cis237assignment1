@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Patrick Lankford
+ * CIS 237 T-R
+ * September 22, 2016
+ * */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +17,6 @@ namespace assignment1
 
     class UserInterface
     {
-        private WineItem wineItem;
-
         public int GetUserInput()
         {
             printMenuSelection();
@@ -51,6 +56,12 @@ namespace assignment1
             return searchString;
         }
 
+        /*
+         * Get the user input for the wine item they would like to add to the array
+         * Create the wine item in the WineItem class
+         * Create the new string to add from the WineItem class
+         * return the string to program to add
+         * */
         public string GetAddItem()
         {
             Console.Write("Enter the Wine ID:  ");

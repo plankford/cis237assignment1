@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Patrick Lankford
+ * CIS 237 T-R
+ * September 22, 2016
+ * */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,8 +42,10 @@ namespace assignment1
             {
                 _counter = 0;
 
+                //Import the CSV file and add the items into the wineCollection class
                 while ((_line = streamReader.ReadLine()) != null)
                 {
+                    //Create the item in the wineCollection class
                     wineCollection.AddWineItem(_line, _counter++);
                 }
                 wineCollection.CreateArrayString();                                         // This is added
